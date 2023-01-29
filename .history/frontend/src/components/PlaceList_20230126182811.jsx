@@ -1,0 +1,49 @@
+import React, { useEffect, useContext } from "react";
+import HotelFinder from "../apis/HotelFinder";
+import { PlacesContext } from "../context/PlacesContext";
+import { useNavigate } from "react-router-dom";
+import Container from "react-bootstrap/Container;"
+
+
+
+const PlaceList = () => {
+
+    const { places, setPlaces } = useContextPlacesContext);
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await PlacesFinder.get("/");
+          console.log(response.data.data);
+          setHotels(response.data.data.hotels);
+        } catch (err) {}
+      };
+  
+      fetchData();
+    }, [setHotels]);
+  
+  
+    const handleHotelSelect = (id) => {
+      navigate(`/hotels/${id}`);
+    };
+    return (
+          <Container>
+        <h1 className="text-center mb-2 py-4 fw-bold">Featured Arts</h1>
+        <div className="products">
+         
+            <Row>
+              {places.map((place, index) => (
+                <Col key={index} sm={6} md={4} lg={3} className="mb-3 pt-2">
+                  <Place product={place} />
+                </Col>
+              ))}
+            </Row>
+          )}
+            </div>
+        </Container>
+    );
+  };
+  
+
+export default PlaceList
