@@ -7,7 +7,7 @@ const {
   logout,
 } = require('../controllers/auth.js')
 const {
-  validationMiddleware,
+  validationMiddleware
 } = require('../middlewares/validations_middleware')
 const { registerValidation, loginValidation } = require('../validators/auth.js')
 const { userAuth } = require('../middlewares/auth_middleware.js')
