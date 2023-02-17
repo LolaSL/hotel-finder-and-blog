@@ -1,0 +1,135 @@
+import React, {
+  // useReducer,
+  useEffect,
+  useState
+} from "react";
+import Card from "react-bootstrap/Card";
+import axios from "axios";
+import { useLocation } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
+import Rings from "../components/Rings.jsx";
+import Message from "../components/Message.jsx";
+import { getError } from "../utils";
+
+const getText = (html) => {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  return doc.body.textContent;
+};
+
+// const reducer = (state, action) => {
+//   switch (action.type) {
+//     // case "REFRESH_PRODUCT":
+//     //   return { ...state, product: action.payload };
+//     case "FETCH_REQUEST":
+//       return { ...state, loading: true };
+//     case "FETCH_SUCCESS":
+//       return { ...state, place: action.payload, loading: false };
+//     case "FETCH_ERROR":
+//       return { ...state, loading: false, error: action.payload };
+//     default:
+//       return state;
+//   }
+// };
+
+const PlaceDetail = () => {
+  const [place, setPlace] = useState({});
+const[error, setError] = useState()
+  const location = useLocation();
+  // const navigate = useNavigate();
+const[loading, setLoading] = useState(true)
+  const placeId = location.pathname.split("/")[2];
+
+  // const { currentUser } = useContext(AuthContext);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+       
+        const res = await axios.get(`http://localhost:8090/api/v1/places/${placeId}`);
+        setLoading(true)
+        setPlace(res.data);
+      } catch (error) {
+        setError()
+        toast.error(getError(error));
+      }
+    };
+    fetchData();
+  }, [ placeId]);
+  // const params = useParams();
+  // const { id } = params
+ 
+  // const [{ loading, error, place }, dispatch] = useReducer(reducer, {
+  //   place: [],
+  //   loading: true,
+  //   error: "",
+  // });
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     dispatch({ type: "FETCH_REQUEST" });
+  //     try {
+  //       const  response  = await axios.get(
+  //         `http://localhost:8090/api/v1/places/${id}`
+  //       );
+  //       console.log(response.data)
+  //       dispatch({
+  //         type: "FETCH_SUCCESS",
+  //         payload: response.data,
+  //       });
+  //       // dispatch({ type: "REFRESH_PRODUCT", payload: place.data });
+  //     } catch (error) {
+  //       dispatch({ type: "FETCH_ERROR", payload: getError(error) });
+  //       toast.error(getError(error));
+  //       dispatch({ type: "CREATE_ERROR" });
+  //     }
+  //   };
+  //   fetchData();
+  // }, [id]);
+
+  return loading ? (
+    <Rings />
+  ) : error ? (
+    <Message variant="danger">{error}</Message>
+  ) : (
+    <div>
+      <Helmet>
+        <title>Place detail</title>
+      </Helmet>
+      <Card className="place border shadow rounded mt-4">
+        <Card.Body className="content-title font-weight-light display-6 text-center">
+          {place?.title}
+        </Card.Body>
+        <div className="img p-2">
+          <img
+            src={place?.image_url1}
+            alt={place?.title}
+            className="place-image rounded shadow border img-fluid img-thumbnail"
+          />
+          <Card.Text className="content-place font-weight-light">
+            {getText(place?.where_to_stay)}
+          </Card.Text>
+          <Card.Text className="desc-place font-weight-light">
+            {getText(place?.description)}
+          </Card.Text>
+          <img
+            src={place?.image_url2}
+            alt={place?.title}
+            className="place-image rounded shadow border img-fluid img-thumbnail"
+          />
+          <img
+            src={place?.image_url3}
+            alt={place?.title}
+            className="place-image rounded shadow border img-fluid img-thumbnail"
+          />
+          {/* <Link className="link" to={`/place/${place.id}`}>
+              <Button className="btn btn-home mb-2">Read More</Button>
+            </Link> */}
+        </div>
+      </Card>
+    </div>
+  );
+};
+
+export default PlaceDetail;
