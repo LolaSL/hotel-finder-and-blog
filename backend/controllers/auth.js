@@ -1,5 +1,5 @@
 require("dotenv").config();
-const db = require('../db');
+const pool = require('../db');
 const { hash } = require('bcryptjs')
 const { sign } = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
@@ -7,9 +7,9 @@ const jwt_decode = require('jwt-decode');
 
 
 
- exports.getUsers = async (req, res) => {
+exports.getUsers = async (req, res) => {
   try {
-    const { rows } = await db.query('select * from users; ')
+    const { rows } = await pool.query('select * from users; ')
 
     return res.status(200).json({
       success: true,
@@ -25,7 +25,7 @@ exports.register = async (req, res) => {
   try {
     const hashedPassword = await hash(password, 10)
 
-    await db.query('insert into users(name, email, password) values ($1 , $2, $3)', [
+    await pool.query('insert into users(name, email, password) values ($1 , $2, $3)', [
       name,
       email,
       hashedPassword,
@@ -64,7 +64,7 @@ exports.login = async (req, res) => {
     console.log(access_token)
     const decoded = jwt_decode(access_token);
     return res.status(200).cookie('access_token', access_token, { httpOnly: true }).json({
-      user:decoded,
+      user: decoded,
       success: true,
       message: 'Logged in successfully',
     })
