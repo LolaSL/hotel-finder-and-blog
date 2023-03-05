@@ -1,0 +1,23 @@
+{
+  "name": "hotel-finder",
+  "version": "1.0.0",
+  "description": "Hotel finder & Blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd backend && npm install && node server.js && npm start",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LolaSL/hotel-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LolaSL/hotel-finder/issues"
+  },
+  "homepage": "https://github.com/LolaSL/hotel-finder#readme",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
