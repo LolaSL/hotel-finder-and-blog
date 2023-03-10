@@ -61,11 +61,10 @@ p {
   font-size: 24px;
 }
 
-.text{
-  font-weight: bold;
-  text-align: justify;
+.card-text{
+  align-items: justify;
   padding:  0px 15px;
-font-style: italic;
+font
 }
 .paragraph-tip {
   text-align: justify;
@@ -101,7 +100,7 @@ font-style: italic;
 
 .desc-place,
 .content-place {
-  font-weight: bold;
+  font-weight: lighter;
   text-align: justify;
   padding: 10px;
 

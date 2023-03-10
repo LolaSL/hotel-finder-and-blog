@@ -73,9 +73,9 @@ const HotelList = (props) => {
       </thead>
       <tbody>
         {hotels &&
-          hotels.map((hotel) => {
+          hotels.map((hotel, index) => {
             return (
-              <tr onClick={() => handleHotelSelect(hotel.id)} key={hotel.id} data-testid="row">
+              <tr onClick={() => handleHotelSelect(hotel.id)} key={index} data-testid="row">
                 <td>{hotel.name}</td>
                 <td>{hotel.location}</td>
                 <td>{"$".repeat(hotel.price_range)}</td>

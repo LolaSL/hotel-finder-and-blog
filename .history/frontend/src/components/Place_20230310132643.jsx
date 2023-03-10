@@ -25,12 +25,12 @@ const Place = (props) => {
         <Card.Text className="desc-place fw-bold">
           Destination: {place.destination}
         </Card.Text>
-        <Card.Text className="content-place">
+        <Card.Text className="content-place font-weight-light">
           {getText(place.where_to_stay)}
         </Card.Text>
-        <Card.Text className="text mt-2 mb-4">
+        <Card.TextclassName=" font-weight-light article mt-4 mb-4">
           {getText(place.description)}
-        </Card.Text>
+        </Card.TextclassName=>
         <img
           src={place.image_url2}
           alt={place.title}

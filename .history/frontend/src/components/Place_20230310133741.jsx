@@ -28,7 +28,7 @@ const Place = (props) => {
         <Card.Text className="content-place">
           {getText(place.where_to_stay)}
         </Card.Text>
-        <Card.Text className="text mt-2 mb-4">
+        <Card.Text className="card-text mt-2 mb-4">
           {getText(place.description)}
         </Card.Text>
         <img

@@ -101,7 +101,7 @@ font-style: italic;
 
 .desc-place,
 .content-place {
-  font-weight: bold;
+  font-weight: lighter;
   text-align: justify;
   padding: 10px;
 
