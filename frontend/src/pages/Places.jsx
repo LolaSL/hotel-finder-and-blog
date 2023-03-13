@@ -1,7 +1,6 @@
 import React, { useReducer, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import logger from "use-reducer-logger";
 import Place from "../components/Place.jsx";
 import { Helmet } from "react-helmet-async";
 import Loader from "../components/Loader.jsx";
@@ -23,7 +22,7 @@ const reducer = (state, action) => {
 };
 
 function Places() {
-  const [{ loading, error, places }, dispatch] = useReducer(logger(reducer), {
+  const [{ loading, error, places }, dispatch] = useReducer((reducer), {
     places: [],
     loading: true,
     error: "",
