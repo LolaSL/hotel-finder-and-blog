@@ -7,7 +7,7 @@ const logger = require("morgan");
 const hotelRouter = require("./routes/hotels.js");
 const placeRouter = require("./routes/places.js");
 const authRouter = require("./routes/auth.js");
-// const CLIENT_URL = process.env.CLIENT_URL;
+const CLIENT_URL = process.env.CLIENT_URL;
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const TWO_HOURS = 60 * 60 * 1000 * 13;
@@ -15,7 +15,6 @@ const SESS_SECRET = process.env.SESS_SECRET;
 const path = require('path');
 const cookieSession = require('cookie-session');
 const app = express();
-
 const corsOptions ={
   origin:'http://localhost:3000', 
   credentials:true,            //access-control-allow-credentials:true
