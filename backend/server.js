@@ -46,7 +46,7 @@ app.use('/api/v1/hotels', hotelRouter);
 app.use('/api/v1/places', placeRouter);
 app.use('/api/v1/auth', authRouter);
 
-const __dirname = path.resolve()
+
 app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
