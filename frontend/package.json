@@ -53,5 +53,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.3"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }

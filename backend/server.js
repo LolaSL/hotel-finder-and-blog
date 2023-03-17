@@ -16,15 +16,12 @@ const path = require('path');
 const cookieSession = require('cookie-session');
 const app = express();
 
-const corsOptions ={
-  origin:'https://lively-pavlova-f923f7.netlify.app', 
+const corsOrigin ={
+  origin:'http://localhost:3000', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
-app.use(cors(corsOptions));
-app.use(cors(
-  // { origin: CLIENT_URL, credentials: true }
-));
+app.use(cors(corsOrigin));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cookieSession({
