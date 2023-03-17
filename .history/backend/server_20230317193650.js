@@ -7,24 +7,34 @@ const logger = require("morgan");
 const hotelRouter = require("./routes/hotels.js");
 const placeRouter = require("./routes/places.js");
 const authRouter = require("./routes/auth.js");
-const CLIENT_URL = process.env.CLIENT_URL;
+// const CLIENT_URL = process.env.CLIENT_URL;
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
-const session = require('cookie-session');
 const TWO_HOURS = 60 * 60 * 1000 * 13;
 const SESS_SECRET = process.env.SESS_SECRET;
-const multer = require('multer');
-
+const path = require('path');
+const cookieSession = require('cookie-session');
 const app = express();
 
-app.use(cors({ origin: CLIENT_URL, credentials: true }))
+const corsOrigin = {
+  origin: true,
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+  // Access-Control-Allow-Origin: * 
+}
+app.use(cors(corsOrigin));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 app.use(express.json());
 app.use(cookieParser());
-app.use(session({
+app.use(cookieSession({
   name: process.env.SESS_NAME,
   cookieName: 'session',
   resave: false,
   saveUninitialized: true,
+  keys: ['randomsessionkey'],
   secret: SESS_SECRET,
   cookie: {
     secure: process.env.NODE_ENV === 'production' ? "true" : "auto",
@@ -38,29 +48,19 @@ app.use(session({
 
 
 app.use(logger('combined'));
-app.use(passport.initialize())
-require('./middlewares/passport_middleware')
+app.use(passport.initialize());
+require('./middlewares/passport_middleware');
 
 //initialize routes
-app.use('/api/v1/hotels', hotelRouter)
-app.use('/api/v1/places', placeRouter)
-app.use('/api/v1/auth', authRouter)
+app.use('/api/v1/hotels', hotelRouter);
+app.use('/api/v1/places', placeRouter);
+app.use('/api/v1/auth', authRouter);
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "../frontend/public/upload");
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + file.originalname);
-  },
-});
 
-const upload = multer({ storage });
-
-app.post("http://localhost/api/v1/upload", upload.single("file"), function (req, res) {
-  const file = req.file;
-  res.status(200).json(file.filename);
-});
+app.use(express.static(path.join(__dirname, '/frontend/build')));
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
+);
 
 app.use((error, req, res, next) => {
   res.status(error.status || 500).send({
@@ -70,7 +70,7 @@ app.use((error, req, res, next) => {
     },
   });
   next();
-})
+});
 
 const port = process.env.PORT || 8080;
 
