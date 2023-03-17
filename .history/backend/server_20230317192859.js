@@ -17,7 +17,7 @@ const cookieSession = require('cookie-session');
 const app = express();
 
 const corsOrigin ={
-  origin:true, 
+  origin:tru, 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
