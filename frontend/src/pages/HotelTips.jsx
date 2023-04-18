@@ -17,9 +17,10 @@ const HotelTips = () => {
         </h2>
         <div className="mb-4 mt-4">
           <img
-            src="./images/58.jpg"
+            src="./images/58.AVIF"
             alt="Hotel Reviews"
             className="img-thumbnail image rounded mx-auto d-block"
+            style={{ height: "auto", width: "100%" }}
           />
         </div>
         <article className="font-weight-light article mt-4 mb-4">
@@ -37,9 +38,10 @@ const HotelTips = () => {
         <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">2. Location</h2>
         <div className="mb-4 mt-4">
           <img
-            src="./images/59.jpg"
+            src="./images/59.AVIF"
             alt="Hotel Location"
             className="img-thumbnail image rounded mx-auto d-block"
+            style={{ height: "auto", width: "100%" }}
           />
         </div>
         <article className=" font-weight-light article mt-4 mb-4">
@@ -58,9 +60,10 @@ const HotelTips = () => {
         <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">3. Parking</h2>
         <div className="mb-4 mt-4">
           <img
-            src="./images/60.jpg"
+            src="./images/60.AVIF"
             alt="Hotel parking"
             className="img-thumbnail image rounded mx-auto d-block"
+            style={{ height: "auto", width: "100%" }}
           />
         </div>
         <article className=" font-weight-light article mt-4 mb-4">
@@ -75,9 +78,10 @@ const HotelTips = () => {
         <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">4. Services</h2>
         <div className="mb-4 mt-4">
           <img
-            src="./images/61.jpg"
+            src="./images/61.AVIF"
             alt="Hotel services"
             className="img-thumbnail image rounded mx-auto d-block"
+            style={{ height: "auto", width: "100%" }}
           />
         </div>
         <article className=" font-weight-light article mt-4 mb-4">
@@ -93,9 +97,10 @@ const HotelTips = () => {
         <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">5. Hospitality</h2>
         <div className="mb-4 mt-4">
           <img
-            src="./images/62.jpg"
+            src="./images/62.AVIF"
             alt="Hotel hospitality"
             className="img-thumbnail image rounded mx-auto d-block"
+            style={{ height: "auto", width: "100%" }}
           />
         </div>
         <article className=" font-weight-light article mt-4 mb-4">
@@ -111,9 +116,10 @@ const HotelTips = () => {
         </h2>
         <div className="mb-4 mt-4">
           <img
-            src="./images/63.jpg"
+            src="./images/63.AVIF"
             alt="Hotel meals"
             className="img-thumbnail image rounded mx-auto d-block"
+            style={{ height: "auto", width: "100%" }}
           />
         </div>
         <article className=" font-weight-light article mt-4 mb-4">
@@ -132,9 +138,10 @@ const HotelTips = () => {
         <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">7. Hotel Room Size</h2>
         <div className="mb-4 mt-4">
           <img
-            src="./images/64.jpg"
+            src="./images/64.AVIF"
             alt="Hotel room size"
             className="img-thumbnail image rounded mx-auto d-block"
+            style={{ height: "auto", width: "100%" }}
           />
         </div>
         <article className=" font-weight-light article mt-4 mb-4">
@@ -150,9 +157,10 @@ const HotelTips = () => {
         <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">8. Luxury resort</h2>
         <div className="mb-4 mt-4">
           <img
-            src="./images/65.jpg"
+            src="./images/65.AVIF"
             alt="Luxury resort"
             className="img-thumbnail image rounded mx-auto d-block"
+            style={{ height: "auto", width: "100%" }}
           />
         </div>
         <article className=" font-weight-light article mt-4 mb-4">

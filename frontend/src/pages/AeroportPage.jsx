@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import Container from "react-bootstrap/Container";
 import Menu from "../components/Menu";
 
-
 const AeroportPage = () => {
   return (
     <div className="d-flex d-flex slide-page">
@@ -17,9 +16,10 @@ const AeroportPage = () => {
         <section className="d-block juctify-content-center">
           <div className="mb-4 mt-4">
             <img
-              src="./images/46.jpg"
+              src="./images/46.AVIF"
               alt="Ben Gurion Airport"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -46,9 +46,10 @@ const AeroportPage = () => {
               Ben Gurion Airport Code, Location, and Contact Information
             </h2>
             <img
-              src="./images/47.jpg"
+              src="./images/47.AVIF"
               alt="Aeroport contact information"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light">
@@ -92,9 +93,10 @@ const AeroportPage = () => {
               Before flight
             </h2>
             <img
-              src="./images/48.jpg"
+              src="./images/48.AVIF"
               alt="Before flight"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -128,9 +130,10 @@ const AeroportPage = () => {
               Ben Gurion Airport Parking
             </h2>
             <img
-              src="./images/49.jpg"
+              src="./images/49.AVIF"
               alt="Ben Gurion Airport Parking"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -146,9 +149,10 @@ const AeroportPage = () => {
               Renting the car
             </h2>
             <img
-              src="./images/50.jpg"
+              src="./images/50.AVIF"
               alt="Renting the car"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -163,9 +167,10 @@ const AeroportPage = () => {
               Public Transportation and Taxi
             </h2>
             <img
-              src="./images/51.jpg"
+              src="./images/51.AVIF"
               alt="Railway Train"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -187,9 +192,10 @@ const AeroportPage = () => {
               Where to Eat and Drink
             </h2>
             <img
-              src="./images/52.jpg"
+              src="./images/52.AVIF"
               alt="La Farina Cafe"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -210,9 +216,10 @@ const AeroportPage = () => {
               Where to Shop
             </h2>
             <img
-              src="./images/53.jpg"
+              src="./images/53.AVIF"
               alt="James Richardson Duty Free"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -232,9 +239,10 @@ const AeroportPage = () => {
               Airport Lounges
             </h2>
             <img
-              src="./images/54.jpg"
+              src="./images/54.AVIF"
               alt="Airport VIP Lounge "
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -249,9 +257,10 @@ const AeroportPage = () => {
               WiFi and Charging Stations
             </h2>
             <img
-              src="./images/55.jpg"
+              src="./images/55.AVIF"
               alt="WiFi Charging Station"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
@@ -265,18 +274,19 @@ const AeroportPage = () => {
               Ben Gurion Airport Tips & Facts
             </h2>
             <img
-              src="./images/56.jpg"
+              src="./images/56.AVIF"
               alt="Ben Gurion Airport service"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className=" font-weight-light article mt-4 mb-4">
-            There are two synagogues in Terminal 3: one in the Greeter hall
-            and one in the Duty Free hall. They operate 24 hours per day.
+            There are two synagogues in Terminal 3: one in the Greeter hall and
+            one in the Duty Free hall. They operate 24 hours per day.
           </article>
           <article className=" font-weight-light article mt-4 mb-4">
-            A Muslim and Christian prayer room is located in the Departure
-            hall in concourse E.
+            A Muslim and Christian prayer room is located in the Departure hall
+            in concourse E.
           </article>
           <article className=" font-weight-light article mt-4 mb-4">
             Luggage may be stored in one of the three stands on the G floor in

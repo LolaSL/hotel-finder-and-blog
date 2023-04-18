@@ -7,7 +7,7 @@ export const HotelsContextProvider = (props) => {
   const [hotels, setHotels] = useState([]);
   const [selectedHotel, setSelectedHotel] = useState(null);
 
-  const addHotels = (hotel, review) => {
+  const addHotels = (hotel) => {
     setHotels([...hotels, hotel]);
   };
   return (

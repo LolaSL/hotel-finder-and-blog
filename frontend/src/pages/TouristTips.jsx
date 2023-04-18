@@ -21,9 +21,10 @@ const TouristTips = () => {
           </h2>{" "}
           <div className="mb-4 mt-4">
             <img
-              src="./images/1.jpg"
+              src="./images/1.AVIF"
               alt="Eifel Tower"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -37,9 +38,10 @@ const TouristTips = () => {
               2. Travel during low season.
             </h2>{" "}
             <img
-              src="./images/2.jpg"
+              src="./images/2.AVIF"
               alt="Winter"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -71,9 +73,10 @@ const TouristTips = () => {
           </article>
           <div className="mb-4 mt-4">
             <img
-              src="./images/3.jpg"
+              src="./images/3.AVIF"
               alt="House"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">
@@ -87,9 +90,10 @@ const TouristTips = () => {
           </article>
           <div className="mb-4 mt-4">
             <img
-              src="./images/4.jpg"
+              src="./images/4.AVIF"
               alt="Sweemming pool"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">
@@ -104,9 +108,10 @@ const TouristTips = () => {
           </article>
           <div className="mb-4 mt-4">
             <img
-              src="./images/5.jpg"
+              src="./images/5.AVIF"
               alt="Rest"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">
@@ -120,9 +125,10 @@ const TouristTips = () => {
           </article>
           <div className="mb-4 mt-4">
             <img
-              src="./images/6.jpg"
+              src="./images/6.AVIF"
               alt="Breakfast"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">
@@ -139,9 +145,10 @@ const TouristTips = () => {
           </article>
           <div className="mb-4 mt-4">
             <img
-              src="./images/7.jpg"
+              src="./images/7.AVIF"
               alt="Public transportation"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "100%", width: "100%" }}
             />
           </div>
           <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">
@@ -149,9 +156,10 @@ const TouristTips = () => {
           </h2>{" "}
           <div className="mb-4 mt-4">
             <img
-              src="./images/8.jpg"
+              src="./images/8.AVIF"
               alt="Party"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -182,9 +190,10 @@ const TouristTips = () => {
           </article>
           <div className="mb-4 mt-4">
             <img
-              src="./images/9.jpg"
+              src="./images/9.AVIF"
               alt="Party"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">
@@ -218,9 +227,10 @@ const TouristTips = () => {
           </article>
           <div className="mb-4 mt-4">
             <img
-              src="./images/10.jpg"
+              src="./images/10.AVIF"
               alt="internet search"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <h2 className="mt-2 mb-2 display-6  mt-4 mb-4">

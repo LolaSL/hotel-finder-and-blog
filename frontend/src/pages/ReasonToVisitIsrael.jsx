@@ -19,9 +19,10 @@ const ReasonToVisitIsrael = () => {
           </h2>
           <div className="mb-4 mt-4">
             <img
-              src="./images/39.jpg"
+              src="./images/39.AVIF"
               alt="Jerusalem Ben Ehuda Street "
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -38,9 +39,10 @@ const ReasonToVisitIsrael = () => {
           </h2>
           <div className="mb-4 mt-4">
             <img
-              src="./images/40.jpg"
+              src="./images/40.AVIF"
               alt="Religious Quater"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -59,9 +61,10 @@ const ReasonToVisitIsrael = () => {
           </h2>
           <div className="mb-4 mt-4">
             <img
-              src="./images/41.jpg"
+              src="./images/41.AVIF"
               alt="Timna Park"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -81,9 +84,10 @@ const ReasonToVisitIsrael = () => {
           </h2>
           <div className="mb-4 mt-4">
             <img
-              src="./images/42.jpg"
+              src="./images/42.AVIF"
               alt="Tel Aviv Marina"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -100,9 +104,10 @@ const ReasonToVisitIsrael = () => {
           </h2>
           <div className="mb-4 mt-4">
             <img
-              src="./images/43.jpg"
+              src="./images/43.AVIF"
               alt="Negev Desert"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -119,9 +124,10 @@ const ReasonToVisitIsrael = () => {
           </h2>
           <div className="mb-4 mt-4">
             <img
-              src="./images/44.jpg"
+              src="./images/44.AVIF"
               alt="Archaeological Site"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
@@ -140,9 +146,10 @@ const ReasonToVisitIsrael = () => {
           </h2>
           <div className="mb-4 mt-4">
             <img
-              src="./images/45.jpg"
+              src="./images/45.AVIF"
               alt="Delicious Israeli dishes"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">

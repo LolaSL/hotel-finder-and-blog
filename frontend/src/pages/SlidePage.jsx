@@ -3,8 +3,6 @@ import { Helmet } from "react-helmet-async";
 import Container from "react-bootstrap/Container";
 import Menu from "../components/Menu";
 
-
-
 const SlidePage = () => {
   return (
     <div className="d-flex slide-page">
@@ -22,9 +20,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/20.jpg"
+                src="./images/20.AVIF"
                 alt="Yaffa"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -50,9 +49,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/21.jpg"
+                src="./images/21.AVIF"
                 alt="Jerusalem"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -72,7 +72,7 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/22.jpg"
+                src="./images/22.AVIF"
                 alt="Mount of Olives"
                 className="img-thumbnail image rounded mx-auto d-block"
               />
@@ -93,9 +93,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/23.jpg"
+                src="./images/23.AVIF"
                 alt="The Western Wall"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -115,7 +116,7 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/24.jpg"
+                src="./images/24.AVIF"
                 alt="The Church of the Holy Sepulchre"
                 className="img-thumbnail image rounded mx-auto d-block"
               />
@@ -135,9 +136,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/25.jpg"
+                src="./images/25.AVIF"
                 alt="Temple Mount and the Dome of the Rock"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -156,7 +158,7 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/26.jpg"
+                src="./images/26.AVIF"
                 alt="Mahne Yehuda Market"
                 className="img-thumbnail image rounded mx-auto d-block"
               />
@@ -176,9 +178,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/27.jpg"
+                src="./images/27.AVIF"
                 alt="Tower of David Museum"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>{" "}
             <article className="font-weight-light article mt-4 mb-4">
@@ -194,7 +197,7 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/28.jpg"
+                src="./images/28.AVIF"
                 alt="Via Dolorosa"
                 className="img-thumbnail image rounded mx-auto d-block"
               />
@@ -213,9 +216,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/29.jpg"
+                src="./images/29.AVIF"
                 alt="The Israel Museum"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -231,7 +235,7 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/30.jpg"
+                src="./images/30.AVIF"
                 alt="Caesarea"
                 className="img-thumbnail image rounded mx-auto d-block"
               />
@@ -250,9 +254,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/31.jpg"
+                src="./images/31.AVIF"
                 alt="Negev Desert"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -268,9 +273,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/32.jpg"
+                src="./images/32.AVIF"
                 alt="Dead Sea"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -287,9 +293,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/33.jpg"
+                src="./images/33.AVIF"
                 alt="Massada"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -308,9 +315,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/34.jpg"
+                src="./images/34.AVIF"
                 alt="Tiberias"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -327,9 +335,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/35.jpg"
+                src="./images/35.AVIF"
                 alt="Herzliya Marina"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -346,9 +355,10 @@ const SlidePage = () => {
             </h2>
             <div className="mb-4 mt-4">
               <img
-                src="./images/38.jpg"
+                src="./images/38.AVIF"
                 alt="Eilat"
                 className="img-thumbnail image rounded mx-auto d-block"
+                style={{ height: "auto", width: "100%" }}
               />
             </div>
             <article className="font-weight-light article mt-4 mb-4">
@@ -364,7 +374,6 @@ const SlidePage = () => {
         </section>
       </Container>
       <Menu />
-     
     </div>
   );
 };

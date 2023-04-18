@@ -3,7 +3,7 @@ import Slide from "../components/Slide";
 import { Helmet } from "react-helmet-async";
 import NewsLetter from "../components/NewsLetter";
 import Container from "react-bootstrap/Container";
-import video from "../components/videos/video.mp4";
+import video from "../components/videos/video.webm";
 import { Link } from "react-router-dom";
 
 const JourneyOfAllExperiences = () => {
@@ -40,7 +40,8 @@ const JourneyOfAllExperiences = () => {
               loop
               id="video"
             >
-              <source src={video} type="video/mp4" />
+              {/* <source src={video} type="video/mp4" /> */}
+              <source src={video} type="video/webm" />
             </video>
           </div>
           <figcaption className="p-4">
@@ -80,9 +81,10 @@ const JourneyOfAllExperiences = () => {
         <div>
           <Link to="/tips">
             <img
-              src="./images/17.jpg"
+              src="./images/17.AVIF"
               alt="Tourist tips"
               className="img-fluid  rounded mx-auto d-block shadow"
+              style={{ height: "auto", width: "100%" }}
             />
           </Link>
         </div>
@@ -100,9 +102,10 @@ const JourneyOfAllExperiences = () => {
         <div className="mb-4">
           <Link to="/hotel-tips">
             <img
-              src="./images/66.jpg"
+              src="./images/66.AVIF"
               alt="Tourist tips"
               className="img-fluid  rounded mx-auto d-block shadow"
+              style={{ height: "auto", width: "100%" }}
             />
           </Link>
         </div>

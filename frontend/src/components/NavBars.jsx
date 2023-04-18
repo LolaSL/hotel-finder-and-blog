@@ -72,7 +72,7 @@ function Navbars() {
               aria-controls="basic-navbar-nav"
               id="basic-navbar-nav"
             />
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Collapse id="basic-navbar-nav-collapse">
               <Nav className="me-auto w-100 justify-content-end">
                 <div>
                   <Link className="me-4 nav-link" to="/register">

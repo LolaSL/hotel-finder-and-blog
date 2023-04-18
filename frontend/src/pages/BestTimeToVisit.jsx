@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import Container from "react-bootstrap/Container";
 import Menu from "../components/Menu";
 
-
 const BestTimeToVisit = () => {
   return (
     <div className="d-flex slide-page">
@@ -17,9 +16,10 @@ const BestTimeToVisit = () => {
         <section className="d-block juctify-content-center">
           <div className="mb-4 mt-4">
             <img
-              src="./images/36.jpg"
+              src="./images/36.AVIF"
               alt="Tel-Aviv Yaffa"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">

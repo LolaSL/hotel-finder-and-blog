@@ -17,9 +17,10 @@ const WheatherAndClimate = () => {
         <section className="d-block juctify-content-center">
           <div className="mb-4 mt-4">
             <img
-              src="./images/37.jpg"
+              src="./images/37.AVIF"
               alt="Eilat Marina"
               className="img-thumbnail image rounded mx-auto d-block"
+              style={{ height: "auto", width: "100%" }}
             />
           </div>
           <article className="font-weight-light article mt-4 mb-4">
