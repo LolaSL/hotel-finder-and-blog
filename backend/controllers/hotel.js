@@ -6,7 +6,7 @@ const pool = require("../db");
 exports.getHotels = async (req, res) => {
   try {
     const hotelRatingsData = await pool.query(
-      "select * from hotels left join (select hotels_id, COUNT(*), TRUNC(AVG(rating),1) as average_rating from reviews group by hotels_id) reviews on hotels.id = reviews.hotels_id order by average_rating asc;"
+      "select * from hotels left join (select hotels_id, count(*), trunc(AVG(rating), 1) as average_rating from reviews GROUP BY hotels_id) reviews on hotels.id = reviews.hotels_id order by hotels_id DESC;"
     );
     res.status(200).json({
       status: "success",

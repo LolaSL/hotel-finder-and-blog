@@ -83,7 +83,7 @@ create table users(
     select * from hotels  left join reviews on hotels.id = reviews.hotels_id;
     select * from hotels  full outer join reviews on hotels.id = reviews.hotels_id;
     select * from hotels left join (select hotels_id, count(*), trunc(AVG(rating), 1) 
-    as average_rating from reviews GROUP BY hotels_id) reviews on hotels.id = reviews.hotels_id order by hotels_id asc;
+    as average_rating from reviews GROUP BY hotels_id) reviews on hotels.id = reviews.hotels_id order by hotels_id DESC;
     select * from hotels left join (select hotels_id, count(*), trunc(AVG(rating), 1) 
     as average_rating from reviews GROUP BY hotels_id) reviews on hotels.id = reviews.hotels_id where hotels_id = 1;
     delete from reviews where hotels_id = 26;
