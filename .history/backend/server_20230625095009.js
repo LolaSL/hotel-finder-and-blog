@@ -20,18 +20,18 @@ const app = express();
 app.use(cors({ origin: CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(session({
-  name: process.env.SESS_NAME,
-  cookieName: 'session',
-  resave: false,
-  saveUninitialized: true,
-  secret: SESS_SECRET,
-  cookie: {
-    secure: process.env.NODE_ENV === 'production' ? "true" : "auto",
-    sameSite: process.env.NODE_ENV === 'production' ? "none" : "lax",
-    maxAge: TWO_HOURS,
-  },
-}));
+// app.use(session({
+//   name: process.env.SESS_NAME,
+//   cookieName: 'session',
+//   resave: false,
+//   saveUninitialized: true,
+//   secret: SESS_SECRET,
+//   cookie: {
+//     secure: process.env.NODE_ENV === 'production' ? "true" : "auto",
+//     sameSite: process.env.NODE_ENV === 'production' ? "none" : "lax",
+//     maxAge: TWO_HOURS,
+//   },
+// }));
 app.use(cookieSession({
   name: 'session',
   keys: keys

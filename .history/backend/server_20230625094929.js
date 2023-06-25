@@ -21,7 +21,7 @@ app.use(cors({ origin: CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
-  name: process.env.SESS_NAME,
+  name: process.env.SESS_NAME,NPM START
   cookieName: 'session',
   resave: false,
   saveUninitialized: true,

@@ -14,7 +14,7 @@ const SESS_SECRET = process.env.SESS_SECRET;
 const cookieSession = require('cookie-session');
 const keys = require('./middlewares/keys.js');
 const path = require('path');
-console.log(SESS_SECRET)
+
 const app = express();
 
 app.use(cors({ origin: CLIENT_URL, credentials: true }));
@@ -62,7 +62,7 @@ app.use((error, req, res, next) => {
   next();
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 4010;
 
 app.listen(port, () => {
   console.log(`Server is listening on http://localhost:${port}`);

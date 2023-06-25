@@ -14,7 +14,7 @@ const SESS_SECRET = process.env.SESS_SECRET;
 const cookieSession = require('cookie-session');
 const keys = require('./middlewares/keys.js');
 const path = require('path');
-console.log(SESS_SECRET)
+console.log(s)
 const app = express();
 
 app.use(cors({ origin: CLIENT_URL, credentials: true }));
