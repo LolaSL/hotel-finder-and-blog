@@ -4,7 +4,7 @@
   "description": "hotel finder & blog",
   "main": "index.js",
   "scripts": {
-    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "build": "backend:install && frontend:install && npm frontend build",
     "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,5 @@
   "bugs": {
     "url": "https://github.com/LolaSL/hotel-finder/issues"
   },
-  "homepage": "https://github.com/LolaSL/hotel-finder#readme",
-  "proxy": "http://localhost:3000"
+  "homepage": "https://github.com/LolaSL/hotel-finder#readme"
 }
