@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build":"cd backend && npm install && cd ../frontend && npm install && npm run build",
-   "start": "node backend/server.js" ,
+   "start": "" ,
    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LolaSL/hotel-finder.git"
   },
-  "author": "Lola Shepota",
+  "author": "Lola shepota",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LolaSL/hotel-finder/issues"

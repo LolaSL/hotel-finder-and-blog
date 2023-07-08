@@ -36,7 +36,7 @@ app.use(cookieSession({
   keys: keys
 }));
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://hotel-finder-blog.netlify.app/login');
+  res.setHeader('Access-Control-Allow-Origin', 'hotel-finder-blog.netlify.app');
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   next();

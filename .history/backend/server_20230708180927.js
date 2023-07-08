@@ -35,12 +35,7 @@ app.use(cookieSession({
   name: 'session',
   keys: keys
 }));
-app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://hotel-finder-blog.netlify.app/login');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
-  next();
-});
+
 app.use(logger('combined'));
 app.use(passport.initialize());
 require('./middlewares/passport_middleware');
@@ -50,7 +45,7 @@ app.use('/api/v1/hotels', hotelRouter);
 app.use('/api/v1/places', placeRouter);
 app.use('/api/v1/auth', authRouter);
 
-// const __dirname = path.resolve();
+const _dirname = path.resolve();
 app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 app.get('*', function (req, res) {
