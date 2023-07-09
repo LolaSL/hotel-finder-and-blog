@@ -16,6 +16,11 @@ const keys = require('./middlewares/keys.js');
 const path = require('path');
 const app = express();
 
+// app.use(cors({
+//   origin: 'https://hotel-finder-and-blog.netlify.app',
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true
+// }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
@@ -53,7 +58,7 @@ app.use('/api/v1/auth', authRouter);
 app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+  res.sendFile(path.join(__dirname, 'frontend/build, index.html'));
 });
 
 app.use((error, req, res, next) => {

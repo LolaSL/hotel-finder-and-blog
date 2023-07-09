@@ -16,6 +16,11 @@ const keys = require('./middlewares/keys.js');
 const path = require('path');
 const app = express();
 
+// app.use(cors({
+//   origin: 'https://hotel-finder-and-blog.netlify.app',
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true
+// }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
