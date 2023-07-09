@@ -16,11 +16,7 @@ const keys = require('./middlewares/keys.js');
 const path = require('path');
 const app = express();
 
-app.use(cors({
-  origin: 'https://hotel-finder-and-blog.netlify.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true
-}));
+app.use(cors({ origin: CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
@@ -40,7 +36,7 @@ app.use(cookieSession({
   keys: keys
 }));
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000', 'https://hotel-finder-and-blog.netlify.app/login');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000', 'https://hotel-finder-and-blog.netlify.app/login);
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   next();
