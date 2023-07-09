@@ -5,7 +5,7 @@ const logger = require("morgan");
 const hotelRouter = require("./routes/hotels.js");
 const placeRouter = require("./routes/places.js");
 const authRouter = require("./routes/auth.js");
-const CLIENT_URL = process.env.CLIENT_URL;
+const CLIENT_URL = "http://localhost:3000";
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const session = require("cookie-session");
@@ -35,12 +35,12 @@ app.use(cookieSession({
   name: 'session',
   keys: keys
 }));
-app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/login');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
+//   next();
+// });
 app.use(logger('combined'));
 app.use(passport.initialize());
 require('./middlewares/passport_middleware');
@@ -54,7 +54,7 @@ app.use('/api/v1/auth', authRouter);
 app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'frontend/build, index.html'));
+  res.sendFile(path.join(__dirname, 'frontend/build index.html'));
 });
 
 app.use((error, req, res, next) => {

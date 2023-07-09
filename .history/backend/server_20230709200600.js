@@ -5,7 +5,7 @@ const logger = require("morgan");
 const hotelRouter = require("./routes/hotels.js");
 const placeRouter = require("./routes/places.js");
 const authRouter = require("./routes/auth.js");
-const CLIENT_URL = process.env.CLIENT_URL;
+const CLIENT_URL = "http://localhost:3000";
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const session = require("cookie-session");
@@ -36,7 +36,7 @@ app.use(cookieSession({
   keys: keys
 }));
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001/login');
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   next();
