@@ -5,7 +5,7 @@ const logger = require("morgan");
 const hotelRouter = require("./routes/hotels.js");
 const placeRouter = require("./routes/places.js");
 const authRouter = require("./routes/auth.js");
-// const CLIENT_URL = process.env.CLIENT_URL;
+const CLIENT_URL = process.env.CLIENT_URL;
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const session = require("cookie-session");
@@ -17,7 +17,7 @@ const path = require('path');
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({Access-Control-Allow-Orig'in': 'http://localhost:3000'}))
 app.use(cookieParser());
 app.use(session({
   name: process.env.SESS_NAME,
@@ -29,20 +29,16 @@ app.use(session({
     secure: process.env.NODE_ENV === 'production' ? "true" : "auto",
     sameSite: process.env.NODE_ENV === 'production' ? "none" : "lax",
     maxAge: TWO_HOURS,
-    withCredentials: true
   },
 }));
 app.use(cookieSession({
   name: 'session',
   keys: keys
 }));
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Headers, *, Access-Control-Allow-Origin', 'Origin, X-Requested-with, Content_Type,Accept,Authorization', 'http://localhost:3000');
-  if (req.method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Methods', 'PUT,POST,PATCH,DELETE,GET');
-    return res.status(200).json({});
-  }
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin' , 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   next();
 });
 app.use(logger('combined'));
@@ -54,14 +50,12 @@ app.use('/api/v1/hotels', hotelRouter);
 app.use('/api/v1/places', placeRouter);
 app.use('/api/v1/auth', authRouter);
 
+// const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, 'frontend/build')));
 
-// Serve static files from the frontend build directory
-app.use(express.static(path.join(__dirname, 'frontend/build')));
-
-// Catch-all route to serve the index.html for all other routes
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
-});
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+// });
 
 app.use((error, req, res, next) => {
   res.status(error.status || 500).send({

@@ -13,7 +13,7 @@ const TWO_HOURS = 60 * 60 * 1000 * 13;
 const SESS_SECRET = process.env.SESS_SECRET;
 const cookieSession = require('cookie-session');
 const keys = require('./middlewares/keys.js');
-const path = require('path');
+// const path = require('path');
 const app = express();
 
 app.use(express.json());
@@ -54,14 +54,12 @@ app.use('/api/v1/hotels', hotelRouter);
 app.use('/api/v1/places', placeRouter);
 app.use('/api/v1/auth', authRouter);
 
+// // const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, 'frontend/build')));
 
-// Serve static files from the frontend build directory
-app.use(express.static(path.join(__dirname, 'frontend/build')));
-
-// Catch-all route to serve the index.html for all other routes
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
-});
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+// });
 
 app.use((error, req, res, next) => {
   res.status(error.status || 500).send({

@@ -38,7 +38,7 @@ app.use(cookieSession({
 }));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Headers, *, Access-Control-Allow-Origin', 'Origin, X-Requested-with, Content_Type,Accept,Authorization', 'http://localhost:3000');
+  res.header('Access-Control-Allow-Headers, *, Access-Control-Allow-Origin', 'Origin, X-Requested-with, Content_Type,Accept,Authorization', 'http://localhost:3000/login');
   if (req.method === 'OPTIONS') {
     res.header('Access-Control-Allow-Methods', 'PUT,POST,PATCH,DELETE,GET');
     return res.status(200).json({});
@@ -54,7 +54,12 @@ app.use('/api/v1/hotels', hotelRouter);
 app.use('/api/v1/places', placeRouter);
 app.use('/api/v1/auth', authRouter);
 
+// // const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, 'frontend/build')));
 
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+// });
 // Serve static files from the frontend build directory
 app.use(express.static(path.join(__dirname, 'frontend/build')));
 
