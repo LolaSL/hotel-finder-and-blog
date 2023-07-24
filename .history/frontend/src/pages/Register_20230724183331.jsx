@@ -63,7 +63,7 @@ const Register = () => {
       <div>
         <h1 className="font-weight-light display-1 text-center mt-4">Register</h1>
       </div>
-      <Form onSubmit={(e) => onSubmit(e)} className="small-container">
+      <Form onSubmit={(e) => onSubmit(e)}>
         <Form.Group className="mb-3">
           <Form.Label>Name</Form.Label>
           <Form.Control

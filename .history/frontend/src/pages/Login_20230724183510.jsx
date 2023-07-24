@@ -59,7 +59,7 @@ const Login = () => {
         <title>Log In</title>
       </Helmet>
       <h1 className="font-weight-light display-1 text-center mt-4">Log In</h1>
-      <Form onSubmit={(e) => onSubmit(e)} className="small-container">
+      <Form onSubmit={(e) => onSubmit(e)} className="small">
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>
           <Form.Control
